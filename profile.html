@@ -3,8 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts - Bozhe Universe</title>
+    <title>Profile - Bozhe Universe</title>
     <style>
+        /* Include all your existing styles from index2.html */
+        
+        /* Additional styles for profile page */
+        /* Update the grid layout for mobile */
+        .full-posts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+        
+        @media (min-width: 480px) {
+            .full-posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .full-posts-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                padding: 20px;
+            }
+        }
+        
+        /* Optimize header for mobile */
+        .logo {
+            font-size: 1.5em;
+        }
+        
+        @media (min-width: 768px) {
+            .logo {
+                font-size: 2em;
+            }
+        }
+        
+        /* Adjust navigation for mobile */
+        nav ul li {
+            margin: 0 8px;
+        }
+        
+        nav ul li a {
+            padding: 8px 12px;
+            font-size: 0.8em;
+        }
+        
+        @media (min-width: 768px) {
+            nav ul li {
+                margin: 0 14px;
+            }
+            nav ul li a {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+        }
+        
+        /* Optimize profile section for mobile */
+        .banner-image {
+            height: 150px;
+        }
+        
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            top: -30px;
+        }
+        
+        .user-name {
+            margin-top: 35px;
+            font-size: 1.1em;
+        }
+        
+        @media (min-width: 768px) {
+            .banner-image {
+                height: 200px;
+            }
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+                top: -40px;
+            }
+            .user-name {
+                margin-top: 45px;
+                font-size: 1.2em;
+            }
+        }
+        
+        /* Adjust scrolling text speed for mobile */
+        @media (max-width: 480px) {
+            .scrolling-text {
+                animation: scrollText 15s linear infinite;
+            }
+        }
+        .post-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .post-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .post-info {
+            padding: 15px;
+        }
+
+        .post-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .post-date {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* Add these styles in your <style> section */
         body {
             font-family: sans-serif;
             margin: 0;
@@ -13,122 +134,15 @@
             color: #000;
             line-height: 1.5;
         }
-        
-        .scrolling-banner {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-        }
 
-        .scrolling-text {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scrollText 5s linear infinite;
-        }
-
-        @keyframes scrollText {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        header {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .logo {
-            font-size: 2em;
-            font-weight: bold;
-            text-decoration: none;
-            color: #000;
-            letter-spacing: 0.1em;
-        }
-
-        nav {
-            background-color: #fff;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav li {
-            display: inline;
-            margin: 0 14px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #000;
-            text-transform: uppercase;
-            font-size: 0.9em;
-        }
-
-        .activeTab {
-            border-bottom: 2px solid #000 !important;
-            font-weight: bold;
-        }
-
-        .activeTab:before {
-            display: none;
-        }
-
-        nav ul li a:hover.activeTab {
-            color: #000;
-        }
-
-        nav ul li a {
-            display: inline-block;
-            padding: 10px 15px;
-            position: relative;
-            overflow: hidden;
-            transition: color 0.3s ease;
-            color: #000;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9em;
-        }
-
-        nav ul li a:before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #000;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-
-        nav ul li a:hover:before {
-            transform: scaleX(1);
-        }
-
-        /* User Profile Styles */
         .user-profile {
             background: #fff;
             border: 1px solid #ddd;
-            margin: 10px;  /* Added margin around cards */
+            margin: 10px;
             border-radius: 10px;
             overflow: hidden;
         }
 
-        /* For the container to accommodate the new margins */
-        #profiles-container {
-            padding: 10px;
-        }
         .banner-image {
             width: 100%;
             height: 200px;
@@ -163,24 +177,238 @@
             margin-top: 5px;
         }
 
-        .preview-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
+        #profile-container {
+            padding: 10px;
         }
 
-        .preview-image {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-        /* Add this to your existing styles */
         .user-profile a {
             text-decoration: none;
             color: inherit;
             display: block;
         }
 
+        .post-item a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="index2.html" class="logo">BOZHE UNIVERSE</a>
+    </header>
+
+    <div class="scrolling-banner">
+        <div class="scrolling-text">Website In Development, Not everything will work - also not a real brand, just a stupid project</div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index2.html">users</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="#">more</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="profile-container">
+            <!-- Profile info will be loaded here -->
+        </div>
+        <div id="posts-container" class="full-posts-grid">
+            <!-- Posts will be loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bozhe. All rights reserved.</p>
+        <p class="instagram-link"><a href="https://instagram.com/maxbozhe">Instagram</a></p>
+    </footer>
+
+    <script>
+        async function loadProfile() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const handle = urlParams.get('handle');
+                
+                const response = await fetch('posts.json');
+                const data = await response.json();
+                
+                const user = data.users.find(u => u.handle === handle);
+                
+                if (!user) {
+                    console.error('User not found');
+                    return;
+                }
+
+                // Update page title with user's name
+                document.title = `${user.name} - Bozhe Universe`;
+
+                // Load profile info
+                const profileContainer = document.getElementById('profile-container');
+                profileContainer.innerHTML = `
+                    <div class="user-profile">
+                        <img src="${user.bannerPic}" alt="Banner" class="banner-image">
+                        <div class="profile-info">
+                            <img src="${user.profilePic}" alt="${user.name}" class="profile-pic">
+                            <div class="user-name">${user.name}</div>
+                            <div class="user-handle">${user.handle}</div>
+                        </div>
+                    </div>
+                `;
+
+                // Load all posts
+                const postsContainer = document.getElementById('posts-container');
+                // Update the loadProfile function's post creation section
+                user.posts.forEach(post => {
+                    const postDiv = document.createElement('div');
+                    postDiv.className = 'post-item';
+                    postDiv.innerHTML = `
+                        <img src="${post.image}" alt="${post.title}" class="post-image">
+                        <div class="post-info">
+                            <div class="post-title">${post.title}</div>
+                            <div class="post-date">${post.date}</div>
+                        </div>
+                    `;
+                    postsContainer.appendChild(postDiv);
+                });
+            } catch (error) {
+                console.error('Error loading profile:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadProfile);
+    </script>
+    <!-- Add this right after <body> tag -->
+
+    <script>
+        function openFullscreen(imageSrc) {
+            const overlay = document.querySelector('.fullscreen-overlay');
+            const fullscreenImage = overlay.querySelector('.fullscreen-image');
+            fullscreenImage.src = imageSrc;
+            overlay.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+    
+        function closeFullscreen() {
+            const overlay = document.querySelector('.fullscreen-overlay');
+            overlay.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    
+        // Add event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const overlay = document.querySelector('.fullscreen-overlay');
+            const closeButton = document.querySelector('.close-button');
+            
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    closeFullscreen();
+                }
+            });
+            
+            closeButton.addEventListener('click', closeFullscreen);
+        });
+    </script>
+</body>
+</html>
+
+<style>
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 0.1em;
+}
+
+.scrolling-banner {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 5s linear infinite;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+nav {
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 14px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+nav ul li a:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover:before {
+    transform: scaleX(1);
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+/* Add to your main <style> section at the top */
 footer {
     background-color: #fff;
     padding: 20px;
@@ -196,71 +424,4 @@ footer {
     font-weight: bold;
 }
 
-    </style>
-</head>
-<body>
-    <header>
-        <a href="#" class="logo">BOZHE UNIVERSE</a>
-    </header>
-
-    <div class="scrolling-banner">
-        <div class="scrolling-text">Website In Development, Not everything will work - also not a real brand, just a stupid project</div>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="index.html" class="activeTab">users</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="#">more</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <div id="profiles-container">
-            <!-- Profiles will be loaded here -->
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Bozhe. All rights reserved.</p>
-        <p class="instagram-link"><a href="instagram.com/maxbozhe">Instagram</a></p>
-    </footer>
-
-    <script>
-        async function loadProfiles() {
-            try {
-                const response = await fetch('posts.json');
-                const data = await response.json();
-                const profilesContainer = document.getElementById('profiles-container');
-                
-                data.users.forEach(user => {
-                    const profileDiv = document.createElement('div');
-                    profileDiv.className = 'user-profile';
-                    
-                    profileDiv.innerHTML = `
-                        <a href="profile.html?handle=${user.handle}">
-                            <img src="${user.bannerPic}" alt="Banner" class="banner-image">
-                            <div class="profile-info">
-                                <img src="${user.profilePic}" alt="${user.name}" class="profile-pic">
-                                <div class="user-name">${user.name}</div>
-                                <div class="user-handle">${user.handle}</div>
-                                <div class="preview-grid">
-                                    ${user.preview.map(post => `
-                                        <img src="${post.image}" alt="${post.title}" class="preview-image">
-                                    `).join('')}
-                                </div>
-                            </div>
-                        </a>
-                    `;
-                    
-                    profilesContainer.appendChild(profileDiv);
-                });
-            } catch (error) {
-                console.error('Error loading profiles:', error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadProfiles);
-    </script>
-</body>
-</html>
+</style>
