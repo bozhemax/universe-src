@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "handle": "@maxbozhe",
+      "name": "Max",
+      "profilePic": "Posts/Assets/Photos/25800C7F-AF56-4979-9FC5-1807CFC03DCB.jpeg",
+      "bannerPic": "https://github.com/bozhemax/universe-src/blob/main/dji_mimo_20250214_192940_138_1739592346169_photo.jpg?raw=true",
+      "preview": [
+        {
+          "image": "https://github.com/bozhemax/universe-src/blob/main/dji_mimo_20250214_192940_138_1739592346169_photo.jpg?raw=true",
+          "title": "Downtown Chandler 1"
+        },
+        {
+          "image": "Posts/Assets/Photos/P1020783.JPG",
+          "title": "Home 1"
+        },
+        {
+          "image": "Posts/Assets/Photos/20250108_064757.jpg",
+          "title": "Park 1"
+        }
+      ],
+      "posts": [
+        {
+          "image": "https://github.com/bozhemax/universe-src/blob/main/dji_mimo_20250214_192940_138_1739592346169_photo.jpg?raw=true",
+          "title": "Downtown Chandler 1",
+          "date": "2/14/25"
+        },
+        {
+          "image": "Posts/Assets/Photos/P1020783.JPG",
+          "title": "Home 1",
+          "date": "2/10/25"
+        },
+        {
+          "image": "Posts/Assets/Photos/20250108_064757.jpg",
+          "title": "Park 1",
+          "date": "1/8/25"
+        },
+        {
+          "image": "Posts/Assets/Photos/20241123_205852.jpg",
+          "title": "AZ Ice 1",
+          "date": "11/23/24"
+        },
+        {
+          "image": "Posts/Assets/Photos/P1020627.JPG",
+          "title": "Text 1",
+          "date": "11/19/24"
+        },
+        {
+          "image": "Posts/Assets/Photos/20241019_122221.jpg",
+          "title": "Kats Car 1",
+          "date": "10/19/24"
+        }
+      ]
+    },
+    {
+      "handle": "@dinao",
+      "name": "Dina",
+      "profilePic": "path/to/dina/profile/pic.jpg",
+      "bannerPic": "path/to/dina/banner/pic.jpg",
+      "preview": [
+        {
+          "image": "path/to/first/image.jpg",
+          "title": "First Post"
+        },
+        {
+          "image": "path/to/second/image.jpg",
+          "title": "Second Post"
+        },
+        {
+          "image": "path/to/third/image.jpg",
+          "title": "Third Post"
+        }
+      ],
+      "posts": [
+        
+      ]
+    }
+  ]
+}
