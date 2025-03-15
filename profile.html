@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Bozhe Universe</title>
+
+    <!-- Dynamic Meta Tags (will be updated via JavaScript) -->
+    <meta property="og:title" content="Bozhe Universe">
+    <meta property="og:description" content="Explore the Bozhe Universe">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta name="theme-color" content="#000000">
+    
     <style>
         /* Include all your existing styles from index2.html */
         
@@ -232,6 +240,11 @@
                 const urlParams = new URLSearchParams(window.location.search);
                 const handle = urlParams.get('handle');
                 
+                if (!handle) {
+                    document.title = 'Bozhe Universe';
+                    return;
+                }
+                
                 const response = await fetch('posts.json');
                 const data = await response.json();
                 
@@ -242,8 +255,12 @@
                     return;
                 }
 
-                // Update page title with user's name
+                // Update page title and meta tags
                 document.title = `${user.name} - Bozhe Universe`;
+                document.querySelector('meta[property="og:title"]').setAttribute('content', `${user.name} - Bozhe Universe`);
+                document.querySelector('meta[property="og:description"]').setAttribute('content', `View ${user.name}'s profile on Bozhe Universe`);
+                document.querySelector('meta[property="og:image"]').setAttribute('content', user.profilePic);
+                document.querySelector('meta[property="og:url"]').setAttribute('content', window.location.href);
 
                 // Load profile info
                 const profileContainer = document.getElementById('profile-container');
