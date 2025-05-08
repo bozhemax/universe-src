@@ -3,252 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts - Bozhe Universe</title>
-    
-    <!-- Add iMessage Preview Support -->
-    <meta property="og:title" content="Bozhe Universe">
-    <meta property="og:description" content="Explore the Bozhe Universe - A Creative Project">
-
-    <meta property="og:url" content="https://your-domain.com">
-    
-    <!-- Apple-specific meta tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    
-    <!-- iMessage bubble color -->
-    <meta name="theme-color" content="#000000">
-    
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #000;
-            line-height: 1.5;
-        }
-        
-        .scrolling-banner {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-        }
-
-        .scrolling-text {
-            display: inline-block;
-            padding-left: 100%;
-            animation: scrollText 5s linear infinite;
-        }
-
-        @keyframes scrollText {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        header {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .logo {
-            font-size: 2em;
-            font-weight: bold;
-            text-decoration: none;
-            color: #000;
-            letter-spacing: 0.1em;
-        }
-
-        nav {
-            background-color: #fff;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav li {
-            display: inline;
-            margin: 0 14px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #000;
-            text-transform: uppercase;
-            font-size: 0.9em;
-        }
-
-        .activeTab {
-            border-bottom: 2px solid #000 !important;
-            font-weight: bold;
-        }
-
-        .activeTab:before {
-            display: none;
-        }
-
-        nav ul li a:hover.activeTab {
-            color: #000;
-        }
-
-        nav ul li a {
-            display: inline-block;
-            padding: 10px 15px;
-            position: relative;
-            overflow: hidden;
-            transition: color 0.3s ease;
-            color: #000;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.9em;
-        }
-
-        nav ul li a:before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #000;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-
-        nav ul li a:hover:before {
-            transform: scaleX(1);
-        }
-
-        /* User Profile Styles */
-        .user-profile {
-            background: #fff;
-            border: 1px solid #ddd;
-            margin: 10px;  /* Added margin around cards */
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        /* For the container to accommodate the new margins */
-        #profiles-container {
-            padding: 10px;
-        }
-        .banner-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .profile-info {
-            padding: 20px;
-            position: relative;
-            text-align: left;
-        }
-
-        .profile-pic {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            position: absolute;
-            top: -40px;
-            left: 20px;
-            object-fit: cover;
-        }
-
-        .user-name {
-            margin-top: 45px;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .user-handle {
-            color: #666;
-            margin-top: 5px;
-        }
-
-        .preview-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-        }
-
-        .preview-image {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-        /* Add this to your existing styles */
-        .user-profile a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-footer {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    font-size: 0.8em;
-    margin-top: 20px;
-}
-
-.instagram-link a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-    </style>
+    <title>Bozhe Universe - Eternal Glory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="emo-theme.css">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">BOZHE UNIVERSE</a>
-    </header>
-
-    <div class="scrolling-banner">
-        <div class="scrolling-text">Website In Development, Not everything will work - also not a real brand, just a stupid project</div>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="/index.html" class="activeTab">users</a></li>
-            <li><a href="/videos.html">Videos</a></li>
-            <li><a href="#">more</a></li>
-        </ul>
+    <nav class="nav-menu">
+        <a href="/index.html" class="activeTab">all</a>
+        <a href="/videos.html">videos</a>
+        <a href="#">† More</a>
     </nav>
 
-    <main>
+    <div class="container">
+        <h1>Bozhe Universe</h1>
+        
+        <div class="scrolling-banner">
+            <div class="scrolling-text"> Website In Development, Not everything will work - also not a real brand, just a stupid project </div>
+        </div>
+
         <div id="profiles-container">
             <!-- Profiles will be loaded here -->
         </div>
-    </main>
+    </div>
 
     <footer>
-        <p>&copy; 2025 Bozhe. All rights reserved.</p>
-        <p class="instagram-link"><a href="www.instagram.com/maxbozhe">Instagram</a></p>
+        <p>† &copy; 2025 Bozhe Universe †</p>
+        <p class="instagram-link"><a href="www.instagram.com/maxbozhe">†Instagram†</a></p>
     </footer>
 
     <script>
         async function loadProfiles() {
             try {
+                console.log('Starting to load profiles...');
                 const response = await fetch('posts.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
                 const data = await response.json();
+                console.log('Loaded data:', data);
+                
                 const profilesContainer = document.getElementById('profiles-container');
                 
+                if (!data.users || !Array.isArray(data.users)) {
+                    throw new Error('Invalid data structure - users array not found');
+                }
+                
+                console.log('Number of users:', data.users.length);
+                
                 data.users.forEach(user => {
+                    console.log('Processing user:', user);
                     const profileDiv = document.createElement('div');
                     profileDiv.className = 'user-profile';
                     
@@ -272,6 +77,8 @@ footer {
                 });
             } catch (error) {
                 console.error('Error loading profiles:', error);
+                document.getElementById('profiles-container').innerHTML = 
+                    `<div class="error-message">Error loading profiles: ${error.message}</div>`;
             }
         }
 

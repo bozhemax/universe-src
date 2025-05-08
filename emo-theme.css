@@ -1,0 +1,248 @@
+:root {
+  --affliction-black: #000000;
+  --affliction-silver: #c0c0c0;
+  --affliction-gold: #b8860b;
+  --distressed-gray: #2a2a2a;
+}
+
+body {
+  background-color: var(--affliction-black);
+  color: var(--affliction-silver);
+  font-family: 'Cinzel Decorative', 'Old English Text MT', serif;
+  background-image: url('/images/vintage-ornaments.png');
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/images/grunge-texture.png');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(42,42,42,0.8));
+  border: 2px solid var(--affliction-gold);
+  position: relative;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel Decorative', serif;
+  text-transform: uppercase;
+  color: var(--affliction-silver);
+  text-shadow: 2px 2px 4px var(--affliction-gold);
+  letter-spacing: 3px;
+  position: relative;
+}
+
+h1::before, h1::after {
+  content: '†';
+  color: var(--affliction-gold);
+  margin: 0 15px;
+}
+
+.nav-menu {
+  background: linear-gradient(to right, transparent, var(--distressed-gray), transparent);
+  border-top: 1px solid var(--affliction-gold);
+  border-bottom: 1px solid var(--affliction-gold);
+  padding: 15px;
+}
+
+.nav-menu a {
+  color: var(--affliction-silver);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.nav-menu a:hover {
+  color: var(--affliction-gold);
+  text-shadow: 0 0 10px var(--affliction-gold);
+}
+
+.content-box {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--affliction-gold);
+  margin: 30px 0;
+  padding: 25px;
+  position: relative;
+}
+
+.content-box::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  pointer-events: none;
+}
+
+button {
+  background: linear-gradient(45deg, var(--affliction-black), var(--distressed-gray));
+  color: var(--affliction-silver);
+  border: 1px solid var(--affliction-gold);
+  padding: 12px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background: linear-gradient(45deg, var(--distressed-gray), var(--affliction-black));
+  color: var(--affliction-gold);
+  box-shadow: 0 0 15px rgba(184, 134, 11, 0.3);
+}
+
+#profiles-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.user-profile {
+    background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(42,42,42,0.8));
+    border: 2px solid var(--affliction-gold);
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--affliction-gold);
+}
+
+.profile-info {
+    padding: 40px 20px 20px;
+    position: relative;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--affliction-gold);
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.3);
+}
+
+.user-name {
+    margin-top: 20px;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: var(--affliction-silver);
+    text-shadow: 2px 2px 4px var(--affliction-gold);
+    letter-spacing: 2px;
+}
+
+.user-handle {
+    color: var(--affliction-gold);
+    font-style: italic;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    padding: 15px;
+}
+
+.preview-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 1px solid var(--affliction-gold);
+    transition: all 0.3s ease;
+}
+
+.preview-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.3);
+}
+
+.user-profile::before,
+.user-profile::after {
+    content: '†';
+    position: absolute;
+    top: -15px;
+    color: var(--affliction-gold);
+    font-size: 24px;
+    z-index: 1;
+}
+
+.user-profile::before { left: 20px; }
+.user-profile::after { right: 20px; }
+
+.full-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.post-item {
+    background: linear-gradient(45deg, rgba(0,0,0,0.9), rgba(42,42,42,0.8));
+    border: 1px solid var(--affliction-gold);
+    overflow: hidden;
+    position: relative;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid var(--affliction-gold);
+}
+
+.post-info {
+    padding: 15px;
+    color: var(--affliction-silver);
+}
+
+.post-title {
+    font-family: 'Cinzel Decorative', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.post-date {
+    color: var(--affliction-gold);
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .full-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .full-posts-grid {
+        grid-template-columns: 1fr;
+    }
+}

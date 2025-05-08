@@ -3,11 +3,11 @@
     {
       "handle": "@maxbozhe",
       "name": "Max",
-      "profilePic": "Posts/Assets/Photos/Max/P1020776 2.JPG",
-      "bannerPic": "Posts/Assets/Photos/Max/P1020829 2.JPG",
+      "profilePic": "Posts/Assets/Photos/Max/25800C7F-AF56-4979-9FC5-1807CFC03DCB.jpeg",
+      "bannerPic": "Posts/Assets/Photos/Max/P1020651.JPG",
       "preview": [
         {
-          "image": "Posts/Assets/Photos/Max/P1020864.JPG",
+          "image": "Posts/Assets/Photos/Max/20241019_122221.jpg",
           "title": "Downtown Chandler 1"
         },
         {
@@ -21,9 +21,9 @@
       ],
       "posts": [
         {
-          "image": "Posts/Assets/Photos/Max/P1020864.JPG",
-          "title": "Kats House 1",
-          "date": "2/10/25"
+          "image": "https://github.com/bozhemax/universe-src/blob/main/dji_mimo_20250214_192940_138_1739592346169_photo.jpg?raw=true",
+          "title": "Downtown Chandler 1",
+          "date": "2/14/25"
         },
         {
           "image": "Posts/Assets/Photos/Max/P1020783.JPG",
@@ -41,11 +41,36 @@
           "date": "11/23/24"
         },
         {
+          "image": "Posts/Assets/Photos/Max/P1020627.JPG",
+          "title": "Text 1",
+          "date": "11/19/24"
+        },
+        {
           "image": "Posts/Assets/Photos/Max/20241019_122221.jpg",
           "title": "Kats Car 1",
           "date": "10/19/24"
         }
       ]
-    }
+    },
+    {
+      "handle": "@jit_jason",
+      "name": "Jayson",
+      "profilePic": "/Posts/Assets/Photos/Jason/IMG_8418.jpg",
+      "bannerPic": "/Posts/Assets/Photos/Jason/1D571F26-234C-496F-97DF-E23D486E6D07_1_201_a.jpeg",
+      "preview": [
+        {
+          "image": "/Posts/Assets/Photos/Jason/49DC78C7-28D9-4644-B2F8-28F66C16100D.jpeg",
+          "title": "concert 1"
+        },
+        {
+          "image": "/Posts/Assets/Photos/Jason/IMG_6227.jpeg",
+          "title": "concert 2"
+        },
+        {
+          "image": "/Posts/Assets/Photos/Jason/IMG_6943.jpeg",
+          "title": "Third Post"
+        }
       ]
     }
+  ]
+}

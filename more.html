@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More - Bozhe Universe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="emo-theme.css">
+    <style>
+        .snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: var(--affliction-black);
+            color: var(--affliction-silver);
+            text-align: center;
+            border: 1px solid var(--affliction-gold);
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+        }
+
+        .snackbar.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-menu">
+        <a href="/index.html">Users</a>
+        <a href="/videos.html">Videos</a>
+        <a href="/more.html" class="activeTab">More</a>
+    </nav>
+
+    <div class="container">
+        <h1>Join The Legion</h1>
+        
+        <div class="scrolling-banner">
+            <div class="scrolling-text">Website In Development, Not everything will work - just a stupid project</div>
+        </div>
+
+        <div class="content-box">
+            <h2>Apply Now</h2>
+            <p>Ready to join the darkness? Send us your application.</p>
+            <a href="sms:software@taunton.io" class="apply-button">
+                <button>Apply Now</button>
+            </a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bozhe Universe</p>
+        <p class="instagram-link"><a href="www.instagram.com/maxbozhe">Instagram</a></p>
+    </footer>
+
+    <div id="snackbar" class="snackbar">This action is only available on iOS</div>
+
+    <script>
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+
+        function showSnackbar() {
+            const snackbar = document.getElementById("snackbar");
+            snackbar.className = "snackbar show";
+            setTimeout(() => {
+                snackbar.className = "snackbar";
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const applyButton = document.querySelector('.apply-button');
+            if (!isIOS()) {
+                applyButton.href = "#";
+                applyButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showSnackbar();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
