@@ -19,7 +19,7 @@
         <h1>Bozhe Universe</h1>
         
         <div class="scrolling-banner">
-            <div class="scrolling-text"></div>
+            <div class="scrolling-text">Website In Development, Not everything will work - just a stupid project</div>
         </div>
 
         <div id="profile-container">
@@ -73,12 +73,12 @@
     
                 // Display user posts
                 const postsContainer = document.getElementById('posts-container');
-                postsContainer.innerHTML = user.preview.map(post => `
+                postsContainer.innerHTML = user.posts.map(post => `
                     <div class="post-item">
                         <img src="${post.image}" alt="${post.title}" class="post-image">
                         <div class="post-info">
                             <div class="post-title">${post.title}</div>
-                            <div class="post-date">${post.date || 'No date'}</div>
+                            <div class="post-date">${post.date}</div>
                         </div>
                     </div>
                 `).join('');
