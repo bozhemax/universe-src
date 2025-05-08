@@ -3,11 +3,11 @@
     {
       "handle": "@maxbozhe",
       "name": "Max",
-      "profilePic": "Posts/Assets/Photos/Max/25800C7F-AF56-4979-9FC5-1807CFC03DCB.jpeg",
-      "bannerPic": "Posts/Assets/Photos/Max/P1020651.JPG",
+      "profilePic": "Posts/Assets/Photos/Max/P1020776 2.JPG",
+      "bannerPic": "Posts/Assets/Photos/Max/P1020829 2.JPG",
       "preview": [
         {
-          "image": "Posts/Assets/Photos/Max/20241019_122221.jpg",
+          "image": "Posts/Assets/Photos/Max/P1020864.JPG",
           "title": "Downtown Chandler 1"
         },
         {
@@ -20,6 +20,11 @@
         }
       ],
       "posts": [
+        {
+          "image": "Posts/Assets/Photos/Max/P1020864.JPG",
+          "title": "Kats House 1",
+          "date": "2/10/25"
+        },
         {
           "image": "Posts/Assets/Photos/Max/P1020783.JPG",
           "title": "Home 1",
